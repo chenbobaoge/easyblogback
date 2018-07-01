@@ -9,15 +9,9 @@
         <module name="eurekaclient" />
         <module name="eurekaserver" />
       </profile>
-      <profile name="Annotation profile for easyblogback" enabled="true">
-        <sourceOutputDir name="eurekaclient/target/generated-sources/annotations" />
-        <sourceTestOutputDir name="eurekaclient/target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <module name="easyblogback" />
-      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="easyblogback" target="1.8" />
+      <module name="easyblogback" target="1.5" />
       <module name="eurekaclient" target="1.8" />
       <module name="eurekaserver" target="1.8" />
     </bytecodeTargetLevel>
