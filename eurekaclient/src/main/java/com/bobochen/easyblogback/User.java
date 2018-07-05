@@ -1,4 +1,4 @@
-package com.bobochen.eureclient;
+package com.bobochen.easyblogback;
 
 import lombok.*;
 

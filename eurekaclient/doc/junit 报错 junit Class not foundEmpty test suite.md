@@ -1,0 +1,1 @@
+修改file-->project structure -->项目-->path-->Exclude output paths

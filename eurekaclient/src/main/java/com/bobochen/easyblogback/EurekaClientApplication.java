@@ -1,21 +1,26 @@
-package com.bobochen.eureclient;
+package com.bobochen.easyblogback;
 
 
-import lombok.Getter;
-import lombok.Setter;
+import com.bobochen.easyblogback.dao.EasyblogDao;
+import com.bobochen.easyblogback.entity.Easyblog;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
+import java.math.BigDecimal;
+import java.util.Date;
 
 @SpringBootApplication
 @EnableEurekaClient
 @RestController
+
 public class EurekaClientApplication {
     public static void main(String[] args) {
 
@@ -23,6 +28,8 @@ public class EurekaClientApplication {
 
     }
 
+    @Autowired
+    private EasyblogDao easyblogdao ;
 
     @RequestMapping("/hi")
     public String home(@RequestParam String name) {
@@ -38,11 +45,14 @@ public class EurekaClientApplication {
     }
 
     @RequestMapping(value = "/hi3/{name2}",method = RequestMethod.POST)
-    public User home4(@PathVariable String name2,@RequestParam String name,@RequestBody  User user) {
+    public Easyblog home4(@PathVariable String name2, @RequestParam String name, @RequestBody  User user) {
+        Easyblog m=  new Easyblog(0L,"ssss",22,new Date(),new BigDecimal("3.33"));
 
+        easyblogdao.save(m);
+        System.out.println("422222");
          System.out.println(name2+" "+name);
          user.setAccount("ssss");
-         return user;
+         return m;
     }
 }
 @Component

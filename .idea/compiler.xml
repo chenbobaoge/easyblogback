@@ -7,12 +7,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="eurekaclient" />
+        <module name="eurekaclientjdbc" />
         <module name="eurekaserver" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="easyblogback" target="1.5" />
       <module name="eurekaclient" target="1.8" />
+      <module name="eurekaclientjdbc" target="1.5" />
       <module name="eurekaserver" target="1.8" />
     </bytecodeTargetLevel>
   </component>
