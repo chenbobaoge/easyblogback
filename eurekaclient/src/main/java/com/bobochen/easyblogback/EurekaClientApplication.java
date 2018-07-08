@@ -8,6 +8,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,11 +17,11 @@ import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.List;
 
 @SpringBootApplication
 @EnableEurekaClient
 @RestController
-
 public class EurekaClientApplication {
     public static void main(String[] args) {
 
@@ -53,6 +54,24 @@ public class EurekaClientApplication {
          System.out.println(name2+" "+name);
          user.setAccount("ssss");
          return m;
+    }
+
+    @RequestMapping(value = "/findByUserName",method = RequestMethod.GET)
+    public List<Easyblog> home5() {
+       List<Easyblog> bs= easyblogdao.findByUserName("ssss");
+        return bs;
+    }
+
+    @RequestMapping(value = "/findByUserName2",method = RequestMethod.GET)
+    public List<Easyblog> home6() {
+        List<Easyblog> bs= easyblogdao.findByUserName2("2");
+        return bs;
+    }
+
+    @RequestMapping(value = "/findByUserName3",method = RequestMethod.GET)
+    public List<Easyblog> home7() {
+        List<Easyblog> bs= easyblogdao.searchUserName("3");
+        return bs;
     }
 }
 @Component

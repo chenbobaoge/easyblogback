@@ -32,6 +32,7 @@ settings -> inspections -> spring -> spring core -> code -> autowiring for bean 
 
 6.org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration': Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.core.env.ConfigurableEnvironment' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
 原因不明，但暂时感觉没什么问题
+spring-boot热更新的问题，mvn发布成jar应该没有这种问题
 
 
 7.[ERROR] Failed to execute goal on project eurekaserver: Could not resolve dependencies for project com.bobochen:eurekaserver:jar:0.0.1-SNAPSHOT: The following artifacts could not be resolved: org.springframework.cloud:spring-cloud-starter-netflix-eureka-server:
@@ -52,3 +53,18 @@ settings -> inspections -> spring -> spring core -> code -> autowiring for bean 
 1.maven 执行清理命令  mvn clean install -U
 第一步完了之后貌似还是不行。
 把mavnen仓库全部删掉，重新考了一个settings.xml到maven目录下，重新下包，重启之后，才正常。
+
+
+8报错 No property searchUserName found for type Easyblog!
+原因：应该是spring 无法自动识别到自定义接口的实现类
+解决方法：如果是spring xml配置。
+```xml
+<jpa:repositories base-package="com.liuxg.**.dao"
+    repository-impl-postfix="Impl" 
+    query-lookup-strategy = "create-if-not-found"
+    entity-manager-factory-ref="entityManagerFactory"
+    transaction-manager-ref="transactionManager" >
+</jpa:repositories>
+```
+
+如果是springboot  把实现类名设置成 接口名+Impl,spring会自动匹配这个实现类
