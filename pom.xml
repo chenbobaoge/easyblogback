@@ -12,6 +12,7 @@
         <module>eurekaserver</module>
         <module>eurekaclient</module>
         <module>eurekaclientjdbc</module>
+        <module>eurekadatatemplate</module>
     </modules>
 
 

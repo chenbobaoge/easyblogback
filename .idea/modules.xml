@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/easyblogback.iml" filepath="$PROJECT_DIR$/easyblogback.iml" />
       <module fileurl="file://$PROJECT_DIR$/eurekaclient/eurekaclient.iml" filepath="$PROJECT_DIR$/eurekaclient/eurekaclient.iml" />
       <module fileurl="file://$PROJECT_DIR$/eurekaclientjdbc/eurekaclientjdbc.iml" filepath="$PROJECT_DIR$/eurekaclientjdbc/eurekaclientjdbc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eurekadatatemplate/eurekadatatemplate.iml" filepath="$PROJECT_DIR$/eurekadatatemplate/eurekadatatemplate.iml" />
       <module fileurl="file://$PROJECT_DIR$/eurekaserver/eurekaserver.iml" filepath="$PROJECT_DIR$/eurekaserver/eurekaserver.iml" />
     </modules>
   </component>
