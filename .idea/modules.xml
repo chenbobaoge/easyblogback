@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/allinone/allinone.iml" filepath="$PROJECT_DIR$/allinone/allinone.iml" />
       <module fileurl="file://$PROJECT_DIR$/easyblogback.iml" filepath="$PROJECT_DIR$/easyblogback.iml" />
       <module fileurl="file://$PROJECT_DIR$/eurekaclient/eurekaclient.iml" filepath="$PROJECT_DIR$/eurekaclient/eurekaclient.iml" />
       <module fileurl="file://$PROJECT_DIR$/eurekaclientjdbc/eurekaclientjdbc.iml" filepath="$PROJECT_DIR$/eurekaclientjdbc/eurekaclientjdbc.iml" />

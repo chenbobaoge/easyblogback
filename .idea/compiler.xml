@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="allinone" />
         <module name="eurekaclient" />
         <module name="eurekaclientjdbc" />
         <module name="eurekadatatemplate" />
@@ -13,6 +14,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="allinone" target="1.8" />
       <module name="easyblogback" target="1.5" />
       <module name="eurekaclient" target="1.8" />
       <module name="eurekaclientjdbc" target="1.8" />

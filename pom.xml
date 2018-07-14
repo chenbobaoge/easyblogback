@@ -13,6 +13,7 @@
         <module>eurekaclient</module>
         <module>eurekaclientjdbc</module>
         <module>eurekadatatemplate</module>
+        <module>allinone</module>
     </modules>
 
 
